@@ -18,3 +18,5 @@ Route::get('/', [App\Http\Controllers\MidternController::class, 'index'])->name(
 
 Route::get('create', [App\Http\Controllers\MidternController::class, 'create']);
 Route::post('create', [App\Http\Controllers\MidternController::class, 'store']);
+
+Route::get('/detail/{id}',[App\Http\Controllers\MidternController::class,'detail']);

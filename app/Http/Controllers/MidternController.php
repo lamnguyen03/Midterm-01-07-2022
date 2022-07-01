@@ -28,4 +28,8 @@ class MidternController extends Controller
         DB::table('res')->insert($arr);
         return redirect(route('show'));
     }
+    public function detail(Request $request){
+        $item = Restaurant::where ('id',$request->id)->first();
+        return view ('detail',compact('item'));
+    }
 }
