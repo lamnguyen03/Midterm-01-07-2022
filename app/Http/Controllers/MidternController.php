@@ -32,4 +32,11 @@ class MidternController extends Controller
         $item = Restaurant::where ('id',$request->id)->first();
         return view ('detail',compact('item'));
     }
+  
+    public function category($type)
+    {
+        $item = Restaurant::where ('type',$type)->get();
+       
+        return view ('show',compact('item'));
+    }
 }

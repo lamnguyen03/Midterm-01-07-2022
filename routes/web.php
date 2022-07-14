@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MidternController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,6 @@ Route::get('create', [App\Http\Controllers\MidternController::class, 'create']);
 Route::post('create', [App\Http\Controllers\MidternController::class, 'store']);
 
 Route::get('/detail/{id}',[App\Http\Controllers\MidternController::class,'detail']);
+
+
+Route::get('/loai{type}', [MidternController::class, 'category']);
